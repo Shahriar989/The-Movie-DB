@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.paging.PagingDataAdapter
@@ -27,7 +27,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var adapter: UpcomingMovieAdapter
 
-    private lateinit var viewModel: UpcomingMovieViewModel
+    private val viewModel by viewModels<UpcomingMovieViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,7 +36,6 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        viewModel = ViewModelProvider(this)[UpcomingMovieViewModel::class.java]
         viewModel.latestMovieVM()
 
         return if (this::binding.isInitialized) {
