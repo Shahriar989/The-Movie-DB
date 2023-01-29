@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RcvItem">
+
+        <attr name="tText" format="string"/>
+        <attr name="src" format="integer"/>
+        <attr name="dText" format="string"/>
+
+    </declare-styleable>
+</resources>

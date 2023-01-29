@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.shahriar.a12_the_movie_db.R
-import com.shahriar.a12_the_movie_db.databinding.FragmentHomeBinding
 import com.shahriar.a12_the_movie_db.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
