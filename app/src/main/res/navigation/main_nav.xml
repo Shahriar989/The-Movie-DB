@@ -12,12 +12,12 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.shahriar.a12_the_movie_db.SearchFragment"
+        android:name="com.shahriar.a12_the_movie_db.ui.dashboard.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.shahriar.a12_the_movie_db.ProfileFragment"
+        android:name="com.shahriar.a12_the_movie_db.ui.dashboard.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
