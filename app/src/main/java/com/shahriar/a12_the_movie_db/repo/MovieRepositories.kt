@@ -9,6 +9,7 @@ import androidx.paging.liveData
 import com.shahriar.a12_the_movie_db.api.ApiServices
 import com.shahriar.a12_the_movie_db.data.dto.latest_movie.ResponseLatestMovieDTO
 import com.shahriar.a12_the_movie_db.paging.UpcomingMoviePagingSource
+import com.shahriar.a12_the_movie_db.utils.NoInternetException
 import javax.inject.Inject
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -34,8 +35,13 @@ class MovieRepositories @Inject constructor(private val apiServices: ApiServices
                 if (response.isSuccessful) {
                     _latestMovie.postValue(response.body())
                 }
+            } catch (e: NoInternetException) {
+
+                Log.i("TAG", "getLatestMovie: ${e.message}")
+
             } catch (e: Exception) {
-                Log.i("TAG","getLatestMovie: ${e.message}")
+
+                Log.i("TAG", "${e.message}")
             }
         }
     }
